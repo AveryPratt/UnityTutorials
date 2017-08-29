@@ -13,6 +13,10 @@ public class DestroyByContact : MonoBehaviour
         {
             return;
         }
+        Debug.Log(explosion);
+        Debug.Log(transform.position);
+        Debug.Log(transform.rotation);
+        Debug.Log("");
         Instantiate(explosion, transform.position, transform.rotation);
         if (other.tag == "Player")
         {
