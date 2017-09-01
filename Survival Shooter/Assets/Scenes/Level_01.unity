@@ -335,6 +335,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeBetweenAttacks: 0.5
   attackDamage: 10
+--- !u!114 &107707414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 107707405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9b9d14572410594cb85d40eedfb150c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHealth: 100
+  currentHealth: 0
+  sinkSpeed: 2.5
+  scoreValue: 10
+  deathClip: {fileID: 8300000, guid: 1d3bfb9269f136947bf8ac164cace1ff, type: 3}
 --- !u!1 &147604426
 GameObject:
   m_ObjectHideFlags: 0
@@ -977,7 +993,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 10
+  orthographic size: 5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1126,32 +1142,19 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 114891310415824088, guid: 20335c6508ed90e449073f7e950b008d,
+        type: 2}
+      propertyPath: healthSlider
+      value: 
+      objectReference: {fileID: 154896317}
+    - target: {fileID: 114891310415824088, guid: 20335c6508ed90e449073f7e950b008d,
+        type: 2}
+      propertyPath: damageImage
+      value: 
+      objectReference: {fileID: 1828071300}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 20335c6508ed90e449073f7e950b008d, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1472287664 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1688293465056066, guid: 20335c6508ed90e449073f7e950b008d,
-    type: 2}
-  m_PrefabInternal: {fileID: 1472287663}
---- !u!114 &1472287665
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1472287664}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 544f2064df03e95419b4a5147c506b08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startingHealth: 100
-  currentHealth: 0
-  healthSlider: {fileID: 154896317}
-  damageImage: {fileID: 1828071300}
-  deathClip: {fileID: 8300000, guid: d36a393bca4582043982db9089e1694f, type: 3}
-  flashSpeed: 5
-  flashColour: {r: 1, g: 0, b: 0, a: 0.1}
 --- !u!1001 &1700186654
 Prefab:
   m_ObjectHideFlags: 0
