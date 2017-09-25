@@ -72,7 +72,7 @@ public class MapGenerator : MonoBehaviour
 
             for (int x = tile.tileX - 1; x <= tile.tileX + 1; x++)
             {
-                for (int y = tile.tileY; y <= tile.tileY; y++)
+                for (int y = tile.tileY - 1; y <= tile.tileY + 1; y++)
                 {
                     if (IsInMapRange(x, y) && (y == tile.tileY || x == tile.tileX))
                     {
@@ -124,6 +124,20 @@ public class MapGenerator : MonoBehaviour
                 foreach (Coord tile in wallRegion)
                 {
                     map[tile.tileX, tile.tileY] = 0;
+                }
+            }
+        }
+
+        List<List<Coord>> roomRegions = GetRegions(1);
+        int roomThresholdSize = 0;
+
+        foreach (List<Coord> wallRegion in roomRegions)
+        {
+            if (wallRegion.Count < roomThresholdSize)
+            {
+                foreach (Coord tile in wallRegion)
+                {
+                    map[tile.tileX, tile.tileY] = 1;
                 }
             }
         }
