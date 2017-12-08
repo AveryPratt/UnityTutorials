@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Procedural Land Generation", "Procedural Land Generation.csproj", "{88816EA8-E7CA-29A5-6408-634D7EF926DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Procedural Land Generation.Editor", "Procedural Land Generation.Editor.csproj", "{579F2DE9-3431-EDB7-84BB-0333A1877633}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{88816EA8-E7CA-29A5-6408-634D7EF926DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88816EA8-E7CA-29A5-6408-634D7EF926DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88816EA8-E7CA-29A5-6408-634D7EF926DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88816EA8-E7CA-29A5-6408-634D7EF926DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{579F2DE9-3431-EDB7-84BB-0333A1877633}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{579F2DE9-3431-EDB7-84BB-0333A1877633}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{579F2DE9-3431-EDB7-84BB-0333A1877633}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{579F2DE9-3431-EDB7-84BB-0333A1877633}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

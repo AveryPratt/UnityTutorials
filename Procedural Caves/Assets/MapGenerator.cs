@@ -76,7 +76,7 @@ public class MapGenerator : MonoBehaviour
                 {
                     if (IsInMapRange(x, y) && (y == tile.tileY || x == tile.tileX))
                     {
-                        if (mapFlags[x, y] == 0 && map[x,y] == tileType)
+                        if (mapFlags[x, y] == 0 && map[x, y] == tileType)
                         {
                             mapFlags[x, y] = 1;
                             queue.Enqueue(new Coord(x, y));
@@ -206,6 +206,7 @@ public class MapGenerator : MonoBehaviour
     private void CreatePassage(Room roomA, Room roomB, Coord tileA, Coord tileB)
     {
         Room.ConnectRooms(roomA, roomB);
+        Debug.Log(tileA.tileX + " " + tileA.tileY + "\n" + tileB.tileX + " " + tileB.tileY);
         Debug.DrawLine(CoordToWorldPoint(tileA), CoordToWorldPoint(tileB), Color.green, 100);
     }
 
@@ -331,9 +332,9 @@ public class MapGenerator : MonoBehaviour
                                     edgeTiles.Add(tile);
                                 }
                             }
-                            catch(Exception ex)
+                            catch
                             {
-                                Debug.Log(x + ", " + y);
+                                //Debug.Log("x: " + x + "\ny: " + y);
                             }
                         }
                     }
