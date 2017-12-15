@@ -81,6 +81,7 @@
     <Compile Include="Assets\MapDisplay.cs" />
     <Compile Include="Assets\MapGenerator.cs" />
     <Compile Include="Assets\Noise.cs" />
+    <Compile Include="Assets\TextureGenerator.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
