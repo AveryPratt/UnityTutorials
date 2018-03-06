@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class Plane : MonoBehaviour
 {
+    public float width;
+    public float height;
     public int X;
     public int Y;
     public MeshFilter MeshFilter;
@@ -12,16 +14,19 @@ public class Plane : MonoBehaviour
     private Mesh Mesh;
     private Vector3[] Vertices;
     private int[] Triangles;
+    private Vector2[] UVs;
 
     private void Start()
     {
         AssembleVertices();
         AssembleTriangles();
+        AssembleUVs();
 
         Mesh = new Mesh();
         MeshFilter.mesh = Mesh;
         Mesh.SetVertices(new List<Vector3>(Vertices));
         Mesh.SetTriangles(Triangles, 0);
+        Mesh.SetUVs(0, new List<Vector2>(UVs));
         Mesh.RecalculateNormals();
     }
 
@@ -34,7 +39,7 @@ public class Plane : MonoBehaviour
             for (int j = 0; j < Y; j++)
             {
                 int idx = i * Y + j;
-                Vertices[idx] = new Vector3(i, 0, j);
+                Vertices[idx] = new Vector3(i * width / (X - 1), j * height / (Y - 1));
             }
         }
     }
@@ -56,6 +61,16 @@ public class Plane : MonoBehaviour
                 Triangles[idx + 5] = i * Y + j + 1;
                 idx += 6;
             }
+        }
+    }
+
+    private void AssembleUVs()
+    {
+        UVs = new Vector2[Vertices.Length];
+
+        for (int i = 0; i < Vertices.Length; i++)
+        {
+            UVs[i] = new Vector2((Vertices[i].x / X / width) * (X - 1), (Vertices[i].y / Y) / height) * (Y - 1);
         }
     }
 }
